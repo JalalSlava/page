@@ -75,20 +75,16 @@
         <h3>My Address:</h3>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3005.115799647318!2d-73.50533018458205!3d41.13199797928841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2a724f3f7b16b%3A0xb9f1f95f4f0d4c71!2s420%20Weed%20St%2C%20New%20Canaan%2C%20CT%2006840!5e0!3m2!1sen!2sus!4v1604943817369!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         
-        <p>Feedback:<br><input type="text" id="feedBack"></p>
-        <input type="button" value="Submit" onclick="msg()">
-        <!---
+        <!--<p>Feedback:<br><input type="text" id="feedBack" value="Leave feedback here!"></p>-->
+        <br>
+        <textarea id="feedBack" name="feedBackInput" rows="4" cols="50">Leave feedback here</textarea>
+        <br>
+        <button onclick="myFunc()">Submit</button>
         <script>
-            function msg() {
-                alert("Feedback has been sent!");
-                const fs = require('fs') 
-                let data = document.getElementById("feedBack")
-                alert(data);
-                fs.writeFile('feedback.txt', data, (err) => { 
-                if (err) throw err; 
-                })
+            function myFunc() {
+                document.getElementById("feedBack").value = "This is the best website ever!";
             }
-        </script>
-        -->          
+
+        </script> 
     </body> 
 </html> 
