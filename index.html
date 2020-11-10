@@ -79,10 +79,9 @@
         <input type="button" value="Submit" onclick="msg()">
         <script>
             function msg() {
-                alert("Feedback Sent");
-                var text = documetn.getElementById("feedBack")
+                alert("Feedback has been sent!");
                 const fs = require('fs') 
-                let data = text
+                let data = document.getElementById("feedBack")
                 fs.writeFile('feedback.txt', data, (err) => { 
                 if (err) throw err; 
                 })
